@@ -2,6 +2,7 @@ from docx import Document
 from collections import Counter
 import re
 from tabulate import tabulate
+import sys
 
 def count_word_occurrences(doc_path):
     doc = Document(doc_path)
@@ -19,7 +20,16 @@ def print_word_occurrences_table(word_occurrences):
     headers = ["Word", "Occurrences"]
     print(tabulate(table_data, headers=headers, tablefmt="grid"))
 
-# Usage example:
-file_path = "PATH/TO/YOUR/WORD/DOCUMENT.DOCX"
-word_occurrences = count_word_occurrences(file_path)
-print_word_occurrences_table(word_occurrences)
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python count_word_occurrences.py <input>")
+        return
+
+    file_path = sys.argv[1]
+    print("Input:", file_path)
+
+    word_occurrences = count_word_occurrences(file_path)
+    print_word_occurrences_table(word_occurrences)
+
+if __name__ == "__main__":
+    main()
