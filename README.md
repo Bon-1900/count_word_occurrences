@@ -12,13 +12,8 @@ The `count_word_occurrences` module is a Python script that analyzes a Word docu
 
 ## Usage
 
-To use the `count_word_occurrences` module, follow these steps:
-
-1. Create a Word document (.docx) with the text you want to analyze.
-
-2. Use the `count_word_occurrences.py` script to process the Word document (Replace `PATH/TO/YOUR/WORD/DOCUMENT.DOCX` with the actual file path of your Word document.)
-
-3. The script will analyze the document and display a table in the terminal with each word and its corresponding occurrence count, sorted from highest to lowest frequency.
+To use the `count_word_occurrences` module, execute `count_word_occurrences.sh`.
+Use `-h` or `--help` flag to see the documentation.
 
 ## Dependencies
 
