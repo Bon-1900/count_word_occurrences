@@ -18,7 +18,7 @@ def print_word_occurrences_table(word_occurrences):
         table_data.append([word, count])
 
     headers = ["Word", "Occurrences"]
-    print(tabulate(table_data, headers=headers, tablefmt="grid"))
+    print("\n",tabulate(table_data, headers=headers, tablefmt="grid"))
 
 def main():
     if len(sys.argv) < 2:
@@ -26,7 +26,7 @@ def main():
         return
 
     file_path = sys.argv[1]
-    print("Input:", file_path)
+    # print("Input:", file_path)
 
     try:
         word_occurrences = count_word_occurrences(file_path)
