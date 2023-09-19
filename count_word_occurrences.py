@@ -28,8 +28,11 @@ def main():
     file_path = sys.argv[1]
     print("Input:", file_path)
 
-    word_occurrences = count_word_occurrences(file_path)
-    print_word_occurrences_table(word_occurrences)
+    try:
+        word_occurrences = count_word_occurrences(file_path)
+        print_word_occurrences_table(word_occurrences)
+    except:
+        print(f"\ndocx.opc.exceptions.PackageNotFoundError: Package not found at '{file_path}'")
 
 if __name__ == "__main__":
     main()
