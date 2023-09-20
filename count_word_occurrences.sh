@@ -8,7 +8,7 @@ show_help() {
     echo "Options:"
     echo "  -h, --help       : See documentation."
     echo "  -p, --path PATH  : Specify a path."
-    return 1    
+    return 1
 }
 
 # Parse command-line arguments
@@ -44,4 +44,5 @@ if [ -z "$input_path" ]; then
 fi
 
 # Run the Python script with the provided input
-python count_word_occurrences.py "$input_path"
+module_path=$(dirname "$(which "$0")")
+python $module_path/count_word_occurrences.py "$input_path"
