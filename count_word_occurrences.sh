@@ -38,7 +38,8 @@ done
 
 # Check if an input argument is provided
 if [ -z "$input_path" ]; then
-  echo "Enter the absolute path of the word document:"
+  echo "Enter the path of the word document:"
+  echo "(Note: both abosolute and relative paths are accpected)"
   read userInput
   input_path=$userInput
 fi
